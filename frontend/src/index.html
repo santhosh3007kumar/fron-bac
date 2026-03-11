@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Santhosh DevOps App</title>
+</head>
+<body>
+
+<h1>Welcome to My DevOps Application 🚀</h1>
+
+<button onclick="loadMessage()">Get Message</button>
+
+<p id="msg"></p>
+
+<script>
+function loadMessage(){
+ fetch('/api/message')
+ .then(res => res.json())
+ .then(data => {
+   document.getElementById("msg").innerText = data.message;
+ });
+}
+</script>
+
+</body>
+</html>
