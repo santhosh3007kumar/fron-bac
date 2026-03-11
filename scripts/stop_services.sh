@@ -1,3 +1,4 @@
 #!/bin/bash
-
-pkill node
+pkill -f "node.*server.js" || true
+pkill -f "ng serve" || true
+echo "Services stopped"
